@@ -25,24 +25,23 @@ public class AuthController : ControllerBase
     /// <summary>
     /// Autentica una llave de acceso y genera un token JWT.
     /// </summary>
-    /// <param name="request">Modelo con la llave codificada en Base64.</param>
-    /// <returns>Token JWT si la llave es válida.</returns>
+    /// <param name="request">Modelo con la llave codificada.</param>
+    /// <returns>Token JWT si la llave es valida.</returns>
     [HttpPost("authenticate")]
     [ProducesResponseType(200)]
     [ProducesResponseType(401)]
     [Produces("application/json")]
     public IActionResult Authenticate([FromBody] AccessKeyModel request)
     {
-        // Decodifica la llave en Base64
+
         string decodedKey;
         try
         {
-            // Intenta decodificar la llave en Base64
+            // Intenta decodificar la llave
             decodedKey = Encoding.UTF8.GetString(Convert.FromBase64String(request.EncodedKey)).Trim();
         }
         catch (FormatException)
         {
-            // Si la cadena no es válida Base64, retorna un error 400 Bad Request
             return BadRequest("La llave proporcionada no es válida.");
         }
 
@@ -55,16 +54,16 @@ public class AuthController : ControllerBase
             return Unauthorized("Llave no válida o expirada");
         }
 
-        // Obtiene la duración del token desde la tabla Parametros
-        var parametroDuracionToken = _context.Parametros.FirstOrDefault(p => p.Nombre.ToLower().Contains("Token_Duration"))??null;
+        // duracion del token desde la tabla Parametros
+        var parametroDuracionToken = _context.Parametros.FirstOrDefault(p => p.Nombre.ToLower().Contains("Token_Duration")) ?? null;
         if (parametroDuracionToken == null)
         {
-            return StatusCode(500, "La duración del token no está configurada.");
+            return StatusCode(500, "La duracion del token no esta configurada.");
         }
 
         if (!double.TryParse(parametroDuracionToken.Valor, out double duracionToken))
         {
-            return StatusCode(500, "La duración del token configurada no es válida.");
+            return StatusCode(500, "La duracion del token configurada no es valida.");
         }
 
         // Genera el token JWT

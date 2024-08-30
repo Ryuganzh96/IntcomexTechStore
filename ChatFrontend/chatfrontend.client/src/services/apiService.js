@@ -2,14 +2,14 @@ import axios from "axios";
 import { verificarToken } from "./authService";
 import { API_CONFIG } from "./config"; // Importar la configuración
 
-// Este archivo contiene la lógica para interactuar con el backend
+// Este archivo contiene la logica para interactuar con el backend
 
 
 
-// Función para enviar una solicitud al endpoint de artículos
+// Funcion para enviar una solicitud al endpoint de articulos
 export const fetchArticulos = async (categoria, cantidad, pagina) => {
     try {
-        const token = await verificarToken(); // Verifica si el token es válido o si se necesita uno nuevo
+        const token = await verificarToken(); // se verifica si el token es válido o si se necesita uno nuevo
 
         // Prepara los datos del cuerpo de la solicitud
         const requestBody = {
@@ -36,7 +36,7 @@ export const fetchArticulos = async (categoria, cantidad, pagina) => {
     }
 };
 
-// Función para obtener articulosdel backend
+// Funcion para obtener articulos del backend
 export async function fetchArticles(category, quantity, page) {
     try {
         const token = await verificarToken();

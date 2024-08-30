@@ -1,1 +1,2 @@
 C:\Users\juan.murillo\source\repos\ChatFrontend\chatfrontend.client\obj\Debug\ClientApp.esproj.CoreCompileInputs.cache
+C:\Users\juan.murillo\source\repos\IntcomexTechStore\ChatFrontend\chatfrontend.client\obj\Debug\ClientApp.esproj.CoreCompileInputs.cache

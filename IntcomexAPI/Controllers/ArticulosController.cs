@@ -14,26 +14,26 @@ public class ArticulosController : ControllerBase
         _context = context;
     }
 
-    // Método que retorna un listado de articulosbasado en la categoría o subcategoría, junto con la paginación.
-    [Authorize]  // Este atributo asegura que solo los usuarios autenticados puedan acceder a este método.
+    // Metodo que retorna un listado de articulos basado en la categoria o subcategoria, junto con la paginacion.
+    [Authorize]  // nos aseguramos que solo los usuarios autenticados puedan acceder a este metodo.
     [HttpPost("listado")]
     public IActionResult GetArticulos([FromBody] ArticulosRequestModel request)
     {
         try
         {
-            // Validación inicial
+
             if (request == null || string.IsNullOrEmpty(request.Categoria) || request.Cantidad <= 0 || request.Pagina <= 0)
             {
-                return BadRequest("Request inválido. Asegúrate de que todos los parámetros son correctos.");
+                return BadRequest("Request inválido. Asegurate de que todos los parámetros son correctos.");
             }
 
-            // Calcula cuántos elementos se deben omitir para la paginación.
+            // calculamos cuantos elementos se deben omitir para la paginacion.
             var skip = (request.Pagina - 1) * request.Cantidad;
 
-            // Prepara una consulta base que obtiene todos los artículos.
+            // consulta base que obtiene todos los articulos.
             var query = _context.Articulos.AsQueryable();
 
-            // Filtra los articulossegún la subcategoría o categoría proporcionada.
+            // Filtramos los articulos
             var subcategorias = _context.Subcategorias
                 .Where(s => s.NombreSubcategoria.ToLower() == request.Categoria.ToLower())
                 .Select(s => s.IdSubcategoria)
@@ -41,31 +41,31 @@ public class ArticulosController : ControllerBase
 
             if (subcategorias.Any())
             {
-                // Buscar articulosrelacionados con las subcategorías encontradas.
+                // Buscamos con las subcategoraas encontradas.
                 var articulosId = _context.ArticulosSubcategorias
                      .Where(asc => subcategorias.Contains(asc.IdSubcategoria))
                      .Select(asc => asc.IdArticulo)
                      .ToList();
 
-                 if (articulosId.Any())
-                 {
-                     query = query.Where(a => articulosId.Contains(a.IdArticulo));
-                 }
-                 else
-                 {
-                     return NotFound("No se encontraron articulospara la subcategoría proporcionada.");
-                 }
+                if (articulosId.Any())
+                {
+                    query = query.Where(a => articulosId.Contains(a.IdArticulo));
+                }
+                else
+                {
+                    return NotFound("No se encontraron articulospara la subcategoria proporcionada.");
+                }
             }
             else
             {
-                // Buscar por categoría si no se encontraron subcategorías.
+                // Buscamos por categoria si no se encontraron subcategorias.
                 var categoria = _context.Categorias
                     .FirstOrDefault(c => c.NombreCategoria.ToLower() == request.Categoria.ToLower());
-                
+
 
                 if (categoria != null)
                 {
-                    // Buscar articulosrelacionados con la categoría encontrada.
+                    // Buscamos con la categoria encontrada.
                     var articulosId = _context.ArticulosCategorias
                         .Where(ac => ac.IdCategoria == categoria.IdCategoria)
                         .Select(ac => ac.IdArticulo)
@@ -77,24 +77,24 @@ public class ArticulosController : ControllerBase
                     }
                     else
                     {
-                        return NotFound("No se encontraron articulospara la categoría proporcionada.");
+                        return NotFound("No se encontraron articulos para la categoria proporcionada.");
                     }
                 }
                 else
                 {
-                    return NotFound("No se encontraron articulosni en subcategoría ni en categoría.");
+                    return NotFound("No se encontraron articulos ni en subcategoria ni en categoria.");
                 }
 
-                
+
             }
 
-            // Calcula el total de articulosque cumplen con los criterios.
+            // total de articulos que cumplen con los criterios.
             var totalItems = query.Count();
 
-            // Calcula el total de páginas basándose en la cantidad de articulospor página.
+            // total de paginas basandose en la cantidad de articulos por pagina.
             var totalPages = (int)Math.Ceiling(totalItems / (double)request.Cantidad);
 
-            // Selecciona los articulosespecíficos para la página solicitada y los convierte en ArticuloDto.
+            // articulos especificos para la pagina solicitada.
             var articulos = query.Skip(skip).Take(request.Cantidad)
                 .Select(a => new ArticuloDto
                 {
@@ -104,7 +104,7 @@ public class ArticulosController : ControllerBase
                     Nombre = a.Nombre
                 }).ToList();
 
-            // Crea un objeto PaginacionDto para encapsular la respuesta.
+            // objeto PaginacionDto para encapsular la respuesta.
             var resultado = new PaginacionDto<ArticuloDto>
             {
                 TotalArticulos = totalItems,
@@ -113,12 +113,11 @@ public class ArticulosController : ControllerBase
                 Articulos = articulos
             };
 
-            // Retorna el resultado en formato JSON.
+            // Retorna en formato JSON.
             return Ok(resultado);
         }
         catch (Exception ex)
         {
-            // Captura y maneja cualquier excepción que pueda ocurrir.
             return StatusCode(500, $"Error interno del servidor: {ex.Message}");
         }
     }

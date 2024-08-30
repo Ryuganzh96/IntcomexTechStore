@@ -61,7 +61,7 @@
     max-width: 70%;
     word-wrap: break-word;
     position: relative;
-    white-space: pre-wrap; /* Asegura que los saltos de línea en el texto se respeten */
+    white-space: pre-wrap;
 }
 
     .message.sent {
@@ -101,7 +101,7 @@
     }
 
     .chat-footer button {
-        background-color: #25D366; /* Ajuste el color para que sea diferente del input */
+        background-color: #25D366; 
         color: white;
         border: none;
         border-radius: 50%;

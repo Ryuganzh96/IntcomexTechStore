@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IntcomexAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3db971794e979f8b119a7cef956c6060487e334c")]
 [assembly: System.Reflection.AssemblyProductAttribute("IntcomexAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IntcomexAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

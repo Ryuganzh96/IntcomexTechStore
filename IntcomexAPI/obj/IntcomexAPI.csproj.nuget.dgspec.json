@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\juan.murillo\\source\\repos\\IntcomexAPI\\IntcomexAPI.csproj": {}
+    "C:\\Users\\juan.murillo\\source\\repos\\IntcomexTechStore\\IntcomexAPI\\IntcomexAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\juan.murillo\\source\\repos\\IntcomexAPI\\IntcomexAPI.csproj": {
+    "C:\\Users\\juan.murillo\\source\\repos\\IntcomexTechStore\\IntcomexAPI\\IntcomexAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\juan.murillo\\source\\repos\\IntcomexAPI\\IntcomexAPI.csproj",
+        "projectUniqueName": "C:\\Users\\juan.murillo\\source\\repos\\IntcomexTechStore\\IntcomexAPI\\IntcomexAPI.csproj",
         "projectName": "IntcomexAPI",
-        "projectPath": "C:\\Users\\juan.murillo\\source\\repos\\IntcomexAPI\\IntcomexAPI.csproj",
+        "projectPath": "C:\\Users\\juan.murillo\\source\\repos\\IntcomexTechStore\\IntcomexAPI\\IntcomexAPI.csproj",
         "packagesPath": "C:\\Users\\juan.murillo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\juan.murillo\\source\\repos\\IntcomexAPI\\obj\\",
+        "outputPath": "C:\\Users\\juan.murillo\\source\\repos\\IntcomexTechStore\\IntcomexAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

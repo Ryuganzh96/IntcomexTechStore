@@ -1,12 +1,12 @@
 import axios from "axios";
-import { API_CONFIG } from "./config"; // Asegúrate de que se importe la configuración
+import { API_CONFIG } from "./config"; //se importa la configuración
 
-// Este archivo contiene la lógica para la autenticación y gestión del token
+// Este archivo contiene la logica para la autenticacion y gestion del token
 
 let token = null;
 let tokenExpirationTime = null;
 
-// Función para autenticar y obtener un token nuevo
+// Funcion para autenticar y obtener un token nuevo
 export const autenticar = async () => {
     try {
         // Llave codificada en Base64 desde la configuración
@@ -18,9 +18,10 @@ export const autenticar = async () => {
             { EncodedKey: encodedKey }
         );
 
-        // Guarda el token y su tiempo de expiración
+        // se guarda el token y su tiempo de expiración
         token = response.data.token;
         tokenExpirationTime = Date.now() + 3600 * 1000; // Por ejemplo, 1 hora
+        tokenExpirationTime = Date.now() + API_CONFIG.TOKEN_EXPIRATION_TIME; 
 
         return token;
     } catch (error) {
@@ -29,10 +30,10 @@ export const autenticar = async () => {
     }
 };
 
-// Función para verificar si el token es válido o si debe obtenerse uno nuevo
+// Funcion para verificar si el token es valido o si debe obtenerse uno nuevo
 export const verificarToken = async () => {
     if (!token || Date.now() >= tokenExpirationTime) {
         return await autenticar(); // Si no hay token o ha expirado, se obtiene uno nuevo
     }
-    return token; // Si el token es válido, se devuelve
+    return token; // Si el token es valido, se devuelve
 };

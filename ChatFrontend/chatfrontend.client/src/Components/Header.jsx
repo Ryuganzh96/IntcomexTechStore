@@ -1,4 +1,3 @@
-import React from "react";
 import botImage from "../assets/botImage.png";
 import { FaPhone, FaVideo, FaEllipsisV } from "react-icons/fa";
 import "./Chat.css";

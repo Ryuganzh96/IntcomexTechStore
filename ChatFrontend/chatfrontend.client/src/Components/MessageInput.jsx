@@ -11,7 +11,7 @@ const MessageInput = ({ onSend }) => {
     const validateMessage = (message) => {
         const parts = message.split(',');
         if (parts.length !== 3) return false;
-        const [, quantity, page] = parts; // Omite la variable 'category' si no se usa
+        const [, quantity, page] = parts; 
         return isNaN(quantity) === false && isNaN(page) === false;
     };
 

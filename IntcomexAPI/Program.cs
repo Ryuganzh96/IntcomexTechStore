@@ -7,11 +7,9 @@ using AspNetCoreRateLimit;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
-    // Disable reference handling to prevent $id properties from appearing in JSON responses
     options.JsonSerializerOptions.ReferenceHandler = null;
 });
 
@@ -42,7 +40,7 @@ builder.Services.AddSwaggerGen(c =>
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
-    .EnableSensitiveDataLogging() // For debugging purposes only
+    .EnableSensitiveDataLogging() 
 );
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -70,7 +68,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Obtener parámetros de rate limit desde la base de datos antes de construir la aplicación
+// parametros de rate limit desde la base de datos antes de construir la aplicacion
 using (var scope = builder.Services.BuildServiceProvider().CreateScope())
 {
     var _context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
@@ -104,7 +102,7 @@ builder.Services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>(); // Al
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
