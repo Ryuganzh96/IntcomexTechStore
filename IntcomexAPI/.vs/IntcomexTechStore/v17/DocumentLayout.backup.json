@@ -1,0 +1,100 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\juan.murillo\\source\\repos\\IntcomexAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DA03E010-F5D6-4669-BB62-59B8888B14AC}|..\\ChatFrontend\\chatfrontend.client\\ClientApp.esproj|c:\\users\\juan.murillo\\source\\repos\\chatfrontend\\chatfrontend.client\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA03E010-F5D6-4669-BB62-59B8888B14AC}|..\\ChatFrontend\\chatfrontend.client\\ClientApp.esproj|c:\\users\\juan.murillo\\source\\repos\\chatfrontend\\chatfrontend.client\\src\\components\\chatbubble.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA03E010-F5D6-4669-BB62-59B8888B14AC}|..\\ChatFrontend\\chatfrontend.client\\ClientApp.esproj|c:\\users\\juan.murillo\\source\\repos\\chatfrontend\\chatfrontend.client\\src\\components\\chat.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA03E010-F5D6-4669-BB62-59B8888B14AC}|..\\ChatFrontend\\chatfrontend.client\\ClientApp.esproj|c:\\users\\juan.murillo\\source\\repos\\chatfrontend\\chatfrontend.client\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA03E010-F5D6-4669-BB62-59B8888B14AC}|..\\ChatFrontend\\chatfrontend.client\\ClientApp.esproj|c:\\users\\juan.murillo\\source\\repos\\chatfrontend\\chatfrontend.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Chat.jsx",
+              "DocumentMoniker": "C:\\Users\\juan.murillo\\source\\repos\\ChatFrontend\\chatfrontend.client\\src\\Components\\Chat.jsx",
+              "RelativeDocumentMoniker": "..\\ChatFrontend\\chatfrontend.client\\src\\Components\\Chat.jsx",
+              "ToolTip": "C:\\Users\\juan.murillo\\source\\repos\\ChatFrontend\\chatfrontend.client\\src\\Components\\Chat.jsx",
+              "RelativeToolTip": "..\\ChatFrontend\\chatfrontend.client\\src\\Components\\Chat.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAADvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-08-30T07:41:23.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChatBubble.jsx",
+              "DocumentMoniker": "C:\\Users\\juan.murillo\\source\\repos\\ChatFrontend\\chatfrontend.client\\src\\Components\\ChatBubble.jsx",
+              "RelativeDocumentMoniker": "..\\ChatFrontend\\chatfrontend.client\\src\\Components\\ChatBubble.jsx",
+              "ToolTip": "C:\\Users\\juan.murillo\\source\\repos\\ChatFrontend\\chatfrontend.client\\src\\Components\\ChatBubble.jsx",
+              "RelativeToolTip": "..\\ChatFrontend\\chatfrontend.client\\src\\Components\\ChatBubble.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-08-30T07:41:17.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.jsx",
+              "DocumentMoniker": "C:\\Users\\juan.murillo\\source\\repos\\ChatFrontend\\chatfrontend.client\\src\\main.jsx",
+              "RelativeDocumentMoniker": "..\\ChatFrontend\\chatfrontend.client\\src\\main.jsx",
+              "ToolTip": "C:\\Users\\juan.murillo\\source\\repos\\ChatFrontend\\chatfrontend.client\\src\\main.jsx",
+              "RelativeToolTip": "..\\ChatFrontend\\chatfrontend.client\\src\\main.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-08-30T07:41:09.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "index.css",
+              "DocumentMoniker": "C:\\Users\\juan.murillo\\source\\repos\\ChatFrontend\\chatfrontend.client\\src\\index.css",
+              "RelativeDocumentMoniker": "..\\ChatFrontend\\chatfrontend.client\\src\\index.css",
+              "ToolTip": "C:\\Users\\juan.murillo\\source\\repos\\ChatFrontend\\chatfrontend.client\\src\\index.css",
+              "RelativeToolTip": "..\\ChatFrontend\\chatfrontend.client\\src\\index.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-30T07:41:08.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Users\\juan.murillo\\source\\repos\\ChatFrontend\\chatfrontend.client\\src\\App.jsx",
+              "RelativeDocumentMoniker": "..\\ChatFrontend\\chatfrontend.client\\src\\App.jsx",
+              "ToolTip": "C:\\Users\\juan.murillo\\source\\repos\\ChatFrontend\\chatfrontend.client\\src\\App.jsx",
+              "RelativeToolTip": "..\\ChatFrontend\\chatfrontend.client\\src\\App.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-08-30T07:41:04.399Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
